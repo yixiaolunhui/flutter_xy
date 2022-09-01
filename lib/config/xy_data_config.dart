@@ -3,6 +3,7 @@ import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 
+import '../xydemo/float/float_page.dart';
 import 'xy_info.dart';
 
 class UIGroupDataConfig {
@@ -48,6 +49,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const CarouselPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "悬浮窗",
+      desc: "悬浮窗",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const FloatPage();
           },
         ));
       },
