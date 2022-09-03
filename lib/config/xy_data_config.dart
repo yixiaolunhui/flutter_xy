@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
+import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 
 import '../xydemo/float/float_page.dart';
 import 'xy_info.dart';
@@ -60,6 +61,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const FloatPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "量角器",
+      desc: "量角器",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const SemiCircleRulerPage();
           },
         ));
       },

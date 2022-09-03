@@ -130,9 +130,9 @@ class CarouselState extends State<CarouselWidget>
 
   @override
   void dispose() {
-    super.dispose();
     _cancelRotateTimer();
     _controller.dispose();
+    super.dispose();
   }
 
   ///开始自动旋转计时器
@@ -144,7 +144,9 @@ class CarouselState extends State<CarouselWidget>
     _rotateTimer = Timer.periodic(const Duration(milliseconds: 5), (timer) {
       rotateAngle += widget.autoSweepAngle;
       // rotateAngle %= 360; // 取个模 防止数值爆表
-      setState(() {});
+      if (mounted) {
+        setState(() {});
+      }
     });
   }
 

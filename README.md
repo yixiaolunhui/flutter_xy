@@ -9,6 +9,7 @@
 | 自定义尺子  | <img src="https://files.mdnice.com/user/34651/071e03aa-46de-4865-ae10-d8639fbfd8ed.gif" width="300"  alt="自定义尺子"/>|  
 | 旋转木马    | <img src="https://files.mdnice.com/user/34651/ea41664e-8f48-4b76-b1fc-8401e75adfbe.gif" width="300" alt="旋转木马"/>|
 | 悬浮窗     | <img src="https://files.mdnice.com/user/34651/54209633-8ae8-4e78-9d91-fe58d705ec81.gif" width="300" alt="悬浮窗"/>|
+| 量角器     | <img src="https://files.mdnice.com/user/34651/9eab5935-a8b3-42ea-85dd-68671524506b.png" width="300" alt="量角器"/>|
 
 
  ### "Android小样"公众号

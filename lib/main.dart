@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xy/home.dart';
+import 'package:flutter_xy/utils/system_bar_utils.dart';
 
 void main() {
+  StatusBarUtil.setBarStatus(false);
   runApp(const MyApp());
 }
 
