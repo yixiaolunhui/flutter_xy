@@ -2,14 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 /*
- * Code 模式
+ * 模式
  */
-enum CodeMode { text }
+enum CodeMode {
+  //文字
+  text
+}
 
 /*
- * Code 样式
+ * 样式
  */
-enum CodeStyle { form, rectangle, line, circle }
+enum CodeStyle {
+  //表格
+  form,
+  //方块
+  rectangle,
+  //横线
+  line,
+  //圈圈
+  circle
+}
 
 /*
  * 验证码
@@ -185,11 +197,16 @@ class CodeCustomPainter extends CustomPainter {
 
   TextEditingController controller;
 
+  //线路画笔
   late Paint linePaint;
+
+  //文字画笔
   late TextPainter textPainter;
 
+  //当前文字索引
   int currentIndex = 0;
 
+  //左右间距值
   double space = 0;
 
   CodeCustomPainter(
@@ -210,25 +227,17 @@ class CodeCustomPainter extends CustomPainter {
     this.focusNode,
     this.controller,
   ) {
-    linePaint = createPaint(borderColor, borderWidth);
+    linePaint = Paint()
+      ..color = borderColor
+      ..isAntiAlias = true
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round
+      ..strokeWidth = borderWidth;
 
     textPainter = TextPainter(
       textAlign: TextAlign.center,
       textDirection: TextDirection.ltr,
     );
-  }
-
-  /*
-   * 创建Paint
-   */
-  Paint createPaint(Color color, double strokeWidth,
-      {PaintingStyle style = PaintingStyle.stroke}) {
-    return Paint()
-      ..color = color
-      ..isAntiAlias = true
-      ..style = style
-      ..strokeCap = StrokeCap.round
-      ..strokeWidth = strokeWidth;
   }
 
   @override
@@ -264,6 +273,7 @@ class CodeCustomPainter extends CustomPainter {
       case CodeStyle.circle:
         _drawCircleCode(canvas, size);
         break;
+      //TODO  拓展
     }
 
     //绘制文字内容
@@ -420,6 +430,7 @@ class CodeCustomPainter extends CustomPainter {
             double y = (height - textPainter.height) / 2;
             textPainter.paint(canvas, Offset(x, y));
             break;
+          //TODO  拓展
         }
       }
     }

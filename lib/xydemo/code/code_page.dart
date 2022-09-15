@@ -16,6 +16,7 @@ class _CodePageState extends State<CodePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: XYAppBar(
           title: "验证码",
           onBack: () {
