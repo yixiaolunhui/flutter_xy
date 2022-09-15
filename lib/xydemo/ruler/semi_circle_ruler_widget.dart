@@ -130,7 +130,7 @@ class SemiCircleRulerCustomPainter extends CustomPainter {
         drawLongLine(canvas, size);
         //绘制刻度值文字
         drawScaleNum(canvas, index);
-        //绘制刻度线
+        // 绘制刻度线
         drawScaleLine(canvas, size);
       }
       //中刻度
@@ -257,11 +257,15 @@ class SemiCircleRulerCustomPainter extends CustomPainter {
    * 绘制最小的半圆
    */
   void drawSmallSemicircle(Canvas canvas, Size size) {
+    //绘制半圆区域
     Rect rect = Rect.fromCircle(
       center: Offset(radius, radius - borderStrokeWidth / 2),
       radius: radius / 10,
     );
+    //这里先绘制半圆边框
     canvas.drawArc(rect, -pi, pi, true, semicirclePaint);
+
+    //绘制白色半圆
     semicirclePaint.color = Colors.white;
     semicirclePaint.style = PaintingStyle.fill;
     canvas.drawArc(rect, -pi, pi, true, semicirclePaint);

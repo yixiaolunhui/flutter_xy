@@ -35,7 +35,7 @@ class _SemiCircleRulerPageState extends State<SemiCircleRulerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: XYAppBar(
-        title: "半圆刻度尺",
+        title: "量角器",
         onBack: () {
           Navigator.pop(context);
         },

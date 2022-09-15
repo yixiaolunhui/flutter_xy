@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
+import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 
+import '../xydemo/code/code_widget.dart';
 import '../xydemo/float/float_page.dart';
 import 'xy_info.dart';
 
@@ -84,7 +86,17 @@ class UIGroupDataConfig {
   ///高仿Widget
   static UIGroupInfo _getXYGroup2() {
     List<UIGroupInfo> children = [];
-    return UIGroupInfo(
-        groupName: "高仿Widget", children: children, isExpand: false);
+    children.add(UIGroupInfo(
+      groupName: "验证码",
+      desc: "验证码",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const CodePage();
+          },
+        ));
+      },
+    ));
+    return UIGroupInfo(groupName: "功能类", children: children, isExpand: false);
   }
 }
