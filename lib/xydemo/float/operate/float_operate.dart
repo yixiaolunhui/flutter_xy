@@ -10,8 +10,6 @@ class FloatOperateWidget extends StatefulWidget {
     required this.child,
     this.top,
     this.bottom,
-    this.width,
-    this.height,
     this.isScrolling,
     this.duration = 200,
     this.alpha = 1.0,
@@ -20,11 +18,14 @@ class FloatOperateWidget extends StatefulWidget {
     this.scrollPercent = 0.5,
   }) : super(key: key);
 
+  //浮窗布局
   final Widget child;
+
+  //浮窗距离顶部距离
   final double? top;
+
+  //浮窗距离底部距离
   final double? bottom;
-  final double? width;
-  final double? height;
 
   //是否滑动中
   final bool? isScrolling;
