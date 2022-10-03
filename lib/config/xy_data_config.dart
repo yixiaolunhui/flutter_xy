@@ -5,8 +5,8 @@ import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 
-import '../xydemo/code/code_widget.dart';
 import '../xydemo/float/float_page.dart';
+import '../xydemo/float/operate/float_operate_page.dart';
 import 'xy_info.dart';
 
 class UIGroupDataConfig {
@@ -93,6 +93,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const CodePage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "运营悬浮窗",
+      desc: "运营悬浮窗",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const FloatOperatePage();
           },
         ));
       },
