@@ -4,9 +4,11 @@ import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
+import 'package:flutter_xy/xydemo/slider/divisions_slider.dart';
 
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
+import '../xydemo/slider/divisions_slider_page.dart';
 import 'xy_info.dart';
 
 class UIGroupDataConfig {
@@ -74,6 +76,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const SemiCircleRulerPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "分段滑块",
+      desc: "分段滑块",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return DivisionsSliderPage();
           },
         ));
       },
