@@ -12,6 +12,7 @@
 | 量角器     | <img src="https://files.mdnice.com/user/34651/9eab5935-a8b3-42ea-85dd-68671524506b.png" width="300" alt="量角器"/>|
 | 短信验证码     | <img src="https://files.mdnice.com/user/34651/41186a91-a93f-4ca6-9712-39e9d1c4cbee.png" width="300" alt="短信验证码"/>|
 | 运营小浮窗     | <img src="https://files.mdnice.com/user/34651/28d303c7-e5ac-49c4-89e4-7a3f56d7dc0b.gif" width="300" alt="运营小浮窗"/>|
+| 分段滑块     | <img src="https://files.mdnice.com/user/34651/59433985-965a-4f1d-b7bc-12acdb2d5f86.gif" width="300" alt="分段滑块"/>|
 
 
  ### "Android小样"公众号
