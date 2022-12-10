@@ -165,7 +165,7 @@ class RulerState extends State<RulerView> {
   bool _onNotification(Notification notification) {
     //ScrollNotification是基类 （ScrollStartNotification/ScrollUpdateNotification/ScrollEndNotification)
     if (notification is ScrollNotification) {
-      print("-------metrics.pixels-------${notification.metrics.pixels}");
+      // print("-------metrics.pixels-------${notification.metrics.pixels}");
       //距离widget中间最近的刻度值
       int centerValue = widget.minValue +
           //notification.metrics.pixels水平滚动的偏移量
@@ -205,7 +205,7 @@ class RulerState extends State<RulerView> {
     double x =
         (centerValue - widget.minValue) / widget.step * widget.subScaleWidth;
     _scrollController.animateTo(x,
-        duration: Duration(milliseconds: 200), curve: Curves.decelerate);
+        duration: const Duration(milliseconds: 200), curve: Curves.decelerate);
   }
 }
 
