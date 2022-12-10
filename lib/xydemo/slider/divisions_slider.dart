@@ -76,10 +76,10 @@ class _DivisionsSliderState extends State<DivisionsSlider> {
     var minValue = double.infinity;
     var result = 0.0;
     for (var element in widget.divisions) {
-      double m = value - element;
-      if (m.abs() < minValue) {
+      double min = (value - element).abs();
+      if (min < minValue) {
         result = element;
-        minValue = m.abs();
+        minValue = min;
       }
     }
     if (_value == result) {
