@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
+import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
-import 'package:flutter_xy/xydemo/slider/divisions_slider.dart';
 
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
@@ -87,6 +87,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return DivisionsSliderPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "表情雨",
+      desc: "表情雨",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const EmojiAnimPage();
           },
         ));
       },

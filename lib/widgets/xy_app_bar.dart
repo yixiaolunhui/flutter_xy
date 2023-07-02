@@ -5,13 +5,13 @@ class XYAppBar extends AppBar {
   XYAppBar({
     Key? key,
     String? title,
+    Color? backgroundColor,
     VoidCallback? onBack,
     List<Widget>? actions,
   }) : super(
           key: key,
-          brightness: Brightness.light,
           centerTitle: true,
-          backgroundColor: Colors.white,
+          backgroundColor: backgroundColor ?? Colors.white,
           elevation: 0,
           actions: actions,
           title: Text(
