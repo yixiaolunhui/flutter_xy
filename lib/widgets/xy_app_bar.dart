@@ -6,6 +6,7 @@ class XYAppBar extends AppBar {
     Key? key,
     String? title,
     Color? backgroundColor,
+    Color? titleColor,
     VoidCallback? onBack,
     List<Widget>? actions,
   }) : super(
@@ -16,17 +17,17 @@ class XYAppBar extends AppBar {
           actions: actions,
           title: Text(
             title ?? "",
-            style: const TextStyle(
-              color: Colors.black,
+            style: TextStyle(
+              color: titleColor ?? Colors.black,
               fontWeight: FontWeight.bold,
             ),
           ),
           leading: onBack == null
               ? Container()
               : IconButton(
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.arrow_back_ios,
-                    color: Colors.black,
+                    color: titleColor ?? Colors.black,
                   ),
                   onPressed: () {
                     onBack.call();

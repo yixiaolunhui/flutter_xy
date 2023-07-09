@@ -14,6 +14,7 @@
 | 运营小浮窗     | <img src="https://files.mdnice.com/user/34651/28d303c7-e5ac-49c4-89e4-7a3f56d7dc0b.gif" width="300" alt="运营小浮窗"/>|
 | 分段滑块     | <img src="https://files.mdnice.com/user/34651/59433985-965a-4f1d-b7bc-12acdb2d5f86.gif" width="300" alt="分段滑块"/>|
 | 表情雨     | <img src="https://files.mdnice.com/user/34651/aa534e96-5cb1-41c5-ab58-2ded706d5dc3.gif" width="300" alt="表情雨"/>|
+| 底部弹出框(Widget层级)     | <img src="https://files.mdnice.com/user/34651/3e651bc1-746c-420b-939f-af45bdf71bb2.gif" width="300" alt="底部弹出框"/>|
 
 
  ### "Android小样"公众号

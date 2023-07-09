@@ -6,6 +6,7 @@ import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 
+import '../xydemo/darg/drag_bottom_sheet_page.dart';
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
 import '../xydemo/slider/divisions_slider_page.dart';
@@ -128,6 +129,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const FloatOperatePage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "底部弹出框",
+      desc: "底部弹出框（支持手势关闭）",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const DragBottomSheetPage();
           },
         ));
       },
