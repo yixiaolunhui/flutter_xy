@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -11,12 +12,14 @@ class ImageClippingPage extends StatefulWidget {
 }
 
 class _ImageClippingPageState extends State<ImageClippingPage>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   double _clipFraction = 0.0;
   double _clipFractionCache = 0.0;
   late AnimationController _controller;
+  late AnimationController _autoController;
   late Animation<double> _animation;
   int currentIndex = 0;
+  Timer? _timer;
 
   List<String> imgList = [
     ImageUtils.getImgPath("img1", format: "jpg"),
@@ -79,25 +82,56 @@ class _ImageClippingPageState extends State<ImageClippingPage>
       })
       ..addStatusListener((status) {
         setState(() {
-          if (_clipFraction.abs() >= 1) {
+          if (status == AnimationStatus.completed && _clipFraction.abs() >= 1) {
             _clipFraction = 0.0;
             currentIndex = currentIndex + 1;
           }
         });
       });
+    _autoController = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      lowerBound: 0.0,
+      upperBound: 1.5,
+      vsync: this,
+    )
+      ..addListener(() {
+        setState(() {
+          _clipFraction = -_autoController.value;
+        });
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _clipFraction = 0.0;
+          currentIndex = currentIndex + 1;
+        }
+      });
+
+    _startTimer();
+  }
+
+  void _startTimer() {
+    const duration = Duration(seconds: 3);
+    _timer = Timer.periodic(duration, (Timer timer) {
+      _autoController.reset();
+      _autoController.forward();
+    });
+  }
+
+  void _stopTimer() {
+    _timer?.cancel();
   }
 
   @override
   void dispose() {
     _controller.dispose();
+    _autoController.dispose();
+    _stopTimer();
     super.dispose();
   }
 
-  void startAnimation() {
-    setState(() {
-      _controller.reset();
-      _controller.forward();
-    });
+  void _startAnimation() {
+    _controller.reset();
+    _controller.forward();
   }
 
   @override
@@ -109,6 +143,7 @@ class _ImageClippingPageState extends State<ImageClippingPage>
       body: GestureDetector(
         onHorizontalDragDown: (DragDownDetails details) {
           _clipFraction = 0.0;
+          _stopTimer();
         },
         onHorizontalDragUpdate: (DragUpdateDetails details) {
           setState(() {
@@ -117,10 +152,22 @@ class _ImageClippingPageState extends State<ImageClippingPage>
           });
         },
         onHorizontalDragEnd: (DragEndDetails details) {
-          startAnimation();
+          _startAnimation();
+          _startTimer();
         },
         child: Stack(
-          children: [...bannerWidgets],
+          children: [
+            ...bannerWidgets,
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 10,
+              child: PointWidget(
+                index: currentIndex % imgList.length,
+                max: imgList.length,
+              ),
+            )
+          ],
         ),
       ),
     );
@@ -168,6 +215,43 @@ class ImageClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(CustomClipper<Path> oldClipper) {
     return true;
+  }
+}
+
+class PointWidget extends StatelessWidget {
+  const PointWidget({
+    Key? key,
+    required this.max,
+    required this.index,
+  }) : super(key: key);
+
+  final int max;
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: [..._pointsWidget()],
+    );
+  }
+
+  List<Widget> _pointsWidget() {
+    List<Widget> points = [];
+    for (int i = 0; i < max; i++) {
+      points.add(Container(
+        margin: const EdgeInsets.only(left: 4),
+        width: 8,
+        height: 8,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: index == i ? Colors.blue : Colors.white,
+        ),
+      ));
+    }
+    return points;
   }
 }
 
