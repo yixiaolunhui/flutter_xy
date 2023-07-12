@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_xy/utils/image_utils.dart';
+import 'package:flutter_xy/r.dart';
 import 'package:flutter_xy/xydemo/tx/tx_banner_widget.dart';
 
 import '../../widgets/xy_app_bar.dart';
@@ -35,19 +35,19 @@ class _ImageClippingPageState extends State<ImageClippingPage> {
                 child: TxBannerWidget(
                   children: [
                     Image.asset(
-                      ImageUtils.getImgPath("img1", format: "jpg"),
+                      R.img1_jpg,
                       fit: BoxFit.fill,
                     ),
                     Image.asset(
-                      ImageUtils.getImgPath("img2", format: "jpg"),
+                      R.img2_jpg,
                       fit: BoxFit.fill,
                     ),
                     Image.asset(
-                      ImageUtils.getImgPath("img3", format: "jpg"),
+                      R.img3_jpg,
                       fit: BoxFit.fill,
                     ),
                     Image.asset(
-                      ImageUtils.getImgPath("img4", format: "jpg"),
+                      R.img4_jpg,
                       fit: BoxFit.fill,
                     ),
                   ],

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_xy/r.dart';
 import 'package:flutter_xy/widgets/xy_app_bar.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_widget.dart';
-
-import '../../utils/image_utils.dart';
 
 /*
  * 旋转木马
@@ -36,48 +35,28 @@ class CarouselShowState extends State<CarouselPage> {
               isAuto: true,
               circleScale: 1,
               children: [
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
-                  filterQuality: FilterQuality.high,
-                ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
-                  filterQuality: FilterQuality.high,
-                ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
-                  filterQuality: FilterQuality.high,
-                ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
-                  filterQuality: FilterQuality.high,
-                ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
-                  filterQuality: FilterQuality.high,
-                ),
-                Image(
-                  image: ImageUtils.getAssetImage("muma"),
+                Image.asset(
+                  R.muma_png,
                   filterQuality: FilterQuality.high,
                 ),
               ],

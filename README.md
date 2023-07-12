@@ -18,6 +18,12 @@
 | 仿腾讯视频Banner     | <img src="https://files.mdnice.com/user/34651/d5940d28-a6e9-4dda-bd92-ec82106bdf16.gif" width="300" alt="仿腾讯视频Banner"/>|
 
 
+| 工具名称       | 功能 |    
+| :--------- | :--: |
+| 资源文件R文件生成  | R.xxxx|   
+
+
+
  ### "Android小样"公众号
 
 <img src="https://files.mdnice.com/user/34651/77970f60-4f6e-40ea-a49e-3b72c879c9d5.jpg" width="300" alt="Android小样"/>

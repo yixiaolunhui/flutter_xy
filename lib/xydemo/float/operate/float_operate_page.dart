@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_xy/utils/image_utils.dart';
 import 'package:flutter_xy/widgets/xy_app_bar.dart';
 import 'package:flutter_xy/xydemo/float/operate/float_operate.dart';
+
+import '../../../r.dart';
 
 /*
  * 运营悬浮窗界面
@@ -56,8 +57,8 @@ class _FloatOperatePageState extends State<FloatOperatePage> {
             percent: 1,
             scrollPercent: 0,
             isScrolling: isScrolling,
-            child: Image(
-              image: ImageUtils.getAssetImage("fudai"),
+            child: Image.asset(
+              R.fudai_png,
               width: 60,
               height: 60,
             ),
@@ -69,10 +70,10 @@ class _FloatOperatePageState extends State<FloatOperatePage> {
             percent: 1,
             scrollPercent: 0.35,
             isScrolling: isScrolling,
-            child: Image(
-              image: ImageUtils.getAssetImage("fuli1"),
-              width: 100,
-              height: 100,
+            child: Image.asset(
+              R.fuli1_png,
+              width: 60,
+              height: 60,
             ),
           ),
           FloatOperateWidget(
@@ -82,10 +83,10 @@ class _FloatOperatePageState extends State<FloatOperatePage> {
             percent: 1,
             scrollPercent: 0.3,
             isScrolling: isScrolling,
-            child: Image(
-              image: ImageUtils.getAssetImage("fuli2"),
-              width: 100,
-              height: 100,
+            child: Image.asset(
+              R.fuli2_png,
+              width: 60,
+              height: 60,
             ),
           ),
           FloatOperateWidget(
@@ -95,10 +96,10 @@ class _FloatOperatePageState extends State<FloatOperatePage> {
             percent: 1,
             scrollPercent: 0.4,
             isScrolling: isScrolling,
-            child: Image(
-              image: ImageUtils.getAssetImage("fuli3"),
-              width: 100,
-              height: 100,
+            child: Image.asset(
+              R.fuli3_png,
+              width: 60,
+              height: 60,
             ),
           ),
         ],
