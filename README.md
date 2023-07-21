@@ -16,6 +16,7 @@
 | 表情雨     | <img src="https://files.mdnice.com/user/34651/aa534e96-5cb1-41c5-ab58-2ded706d5dc3.gif" width="300" alt="表情雨"/>|
 | 底部弹出框(Widget层级)     | <img src="https://files.mdnice.com/user/34651/3e651bc1-746c-420b-939f-af45bdf71bb2.gif" width="300" alt="底部弹出框"/>|
 | 仿腾讯视频Banner     | <img src="https://files.mdnice.com/user/34651/d5940d28-a6e9-4dda-bd92-ec82106bdf16.gif" width="300" alt="仿腾讯视频Banner"/>|
+| 声音波形     | <img src="https://files.mdnice.com/user/34651/edde9843-0699-4db1-bcdd-96bebbca030b.gif" width="300" alt="声音波形"/>|
 
 
 | 工具名称       | 功能 |    
