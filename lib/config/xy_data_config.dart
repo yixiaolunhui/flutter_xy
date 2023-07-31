@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_xy/xydemo/arguments/arguments_test_page.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
@@ -176,6 +177,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const ImageClippingPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "界面跳转参数处理",
+      desc: "界面跳转参数处理",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return ArgumentsTestPage();
           },
         ));
       },
