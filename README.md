@@ -20,9 +20,15 @@
 | 数字切换动画     | <img src="https://files.mdnice.com/user/34651/991dc36a-212a-438c-9c6d-037d4d3d6303.gif" width="300" alt="数字切换动画"/>|
 
 
-| 工具名称       | 功能 |    
+| 功能名称       | 功能 |    
 | :--------- | :--: |
-| 资源文件R文件生成  | R.xxxx|   
+| 界面跳转参数处理  | 路由传参+arguments |   
+| Flutter生命周期 | 新增onCreate、onResume、onPause、onDestroy |
+
+
+| 脚本名称       | 功能 |    
+| :--------- | :--: |
+| 资源文件R文件生成  | R.xxxx|
 
 
 
