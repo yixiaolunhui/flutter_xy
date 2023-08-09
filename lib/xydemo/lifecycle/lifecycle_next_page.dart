@@ -11,12 +11,6 @@ class LifecycleNextPage extends StatefulWidget {
 
 class _LifecycleNextPageState extends PageState<LifecycleNextPage> {
   @override
-  void initState() {
-    super.initState();
-    print("LifecycleNextPage----initState");
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: XYAppBar(
@@ -37,6 +31,12 @@ class _LifecycleNextPageState extends PageState<LifecycleNextPage> {
   }
 
   @override
+  void onCreate() {
+    super.onCreate();
+    print("LifecycleNextPage----onCreate");
+  }
+
+  @override
   void onPause() {
     super.onPause();
     print("LifecycleNextPage----onPause");
@@ -49,8 +49,14 @@ class _LifecycleNextPageState extends PageState<LifecycleNextPage> {
   }
 
   @override
-  void dispose() {
-    print("LifecycleNextPage----dispose");
-    super.dispose();
+  void onStop() {
+    super.onStop();
+    print("LifecycleNextPage----onStop");
+  }
+
+  @override
+  void onDestroy() {
+    print("LifecycleNextPage----onDestroy");
+    super.onDestroy();
   }
 }
