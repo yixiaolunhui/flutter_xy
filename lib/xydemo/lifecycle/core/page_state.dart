@@ -1,17 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:navigation_history_observer/navigation_history_observer.dart';
 
 abstract class PageState<T extends StatefulWidget> extends State<T>
     with PageStateMixin {
-  int _pageInitStartTime = 0;
-  int _pageInitEndTime = 0;
-
   static final List<BuildContext> _contextList = [];
-
-  PageState() {
-    _pageInitStartTime = DateTime.now().millisecondsSinceEpoch;
-  }
 
   @override
   void initState() {
@@ -19,12 +11,6 @@ abstract class PageState<T extends StatefulWidget> extends State<T>
     onCreate();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _addToContextList();
-      _pageInitEndTime = DateTime.now().millisecondsSinceEpoch;
-      var initTime = _pageInitEndTime - _pageInitStartTime;
-      if (kDebugMode) {
-        print("widget route:${RouteHistoryObserver.topRouteName} "
-            "initTime:$initTime");
-      }
     });
   }
 
@@ -64,7 +50,7 @@ mixin PageStateMixin<T extends StatefulWidget> on State<T> {
     if (_route != null) {
       RouteHistoryObserver.addResumeCallback(_route!, onResume);
       RouteHistoryObserver.addPauseCallback(_route!, onPause);
-      RouteHistoryObserver.addPauseCallback(_route!, onStop);
+      RouteHistoryObserver.addStopCallback(_route!, onStop);
     }
     super.didChangeDependencies();
   }
@@ -75,12 +61,10 @@ mixin PageStateMixin<T extends StatefulWidget> on State<T> {
     if (_route != null) {
       RouteHistoryObserver.removeResumeCallback(_route!, onResume);
       RouteHistoryObserver.removePauseCallback(_route!, onPause);
-      RouteHistoryObserver.removePauseCallback(_route!, onStop);
+      RouteHistoryObserver.removeStopCallback(_route!, onStop);
     }
     super.dispose();
   }
-
-  bool isTopRoute() => RouteHistoryObserver._currTopRoute == _route;
 
   void onCreate() {}
 
@@ -99,11 +83,8 @@ class RouteHistoryObserver with WidgetsBindingObserver {
   static final Map<Route, Set<VoidCallback>> _stopCallbacks = {};
   static bool _initialized = false;
   static Route? _currTopRoute;
-  static String? _currTopRouteName;
 
   static Route<dynamic>? get topRoute => _currTopRoute;
-
-  static String? get topRouteName => _currTopRouteName;
 
   static void init() {
     if (_initialized) return;
@@ -120,6 +101,7 @@ class RouteHistoryObserver with WidgetsBindingObserver {
       _appResume();
     } else if (state == AppLifecycleState.paused) {
       _appPause();
+      _appStop();
     }
   }
 
@@ -143,20 +125,18 @@ class RouteHistoryObserver with WidgetsBindingObserver {
       }
     }
 
-    if (topRoute != _currTopRoute) {
-      _currTopRoute = topRoute;
-      _currTopRouteName = Uri.parse(_currTopRoute?.settings.name ?? "").path;
-      var resumeCallbackList = _resumeCallbacks[topRoute];
-      if (resumeCallbackList == null) return;
-      for (var callback in resumeCallbackList) {
+    var stopCallbackList = _stopCallbacks[_currTopRoute];
+    if (stopCallbackList != null) {
+      for (var callback in stopCallbackList) {
         callback.call();
       }
     }
 
-    var preRoute = (historyChange as HistoryChange).oldRoute;
-    var stopCallbackList = _stopCallbacks[preRoute];
-    if (stopCallbackList != null) {
-      for (var callback in stopCallbackList) {
+    if (topRoute != _currTopRoute) {
+      _currTopRoute = topRoute;
+      var resumeCallbackList = _resumeCallbacks[topRoute];
+      if (resumeCallbackList == null) return;
+      for (var callback in resumeCallbackList) {
         callback.call();
       }
     }
@@ -220,9 +200,18 @@ class RouteHistoryObserver with WidgetsBindingObserver {
 
   static void _appPause() {
     if (_currTopRoute == null) return;
-    var callbackList = _pauseCallbacks[_currTopRoute];
-    if (callbackList == null) return;
-    for (var callback in callbackList) {
+    var pauseCallbackList = _pauseCallbacks[_currTopRoute];
+    if (pauseCallbackList == null) return;
+    for (var callback in pauseCallbackList) {
+      callback.call();
+    }
+  }
+
+  static void _appStop() {
+    if (_currTopRoute == null) return;
+    var stopCallbackList = _stopCallbacks[_currTopRoute];
+    if (stopCallbackList == null) return;
+    for (var callback in stopCallbackList) {
       callback.call();
     }
   }
