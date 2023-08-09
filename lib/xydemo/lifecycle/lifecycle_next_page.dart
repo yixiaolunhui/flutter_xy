@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xy/widgets/xy_app_bar.dart';
 import 'package:flutter_xy/xydemo/lifecycle/core/page_state.dart';
 
+import '../../utils/log_utils.dart';
+
 class LifecycleNextPage extends StatefulWidget {
   const LifecycleNextPage({super.key});
 
@@ -33,30 +35,30 @@ class _LifecycleNextPageState extends PageState<LifecycleNextPage> {
   @override
   void onCreate() {
     super.onCreate();
-    print("LifecycleNextPage----onCreate");
+    logger.d("LifecycleNextPage----onCreate");
   }
 
   @override
   void onPause() {
     super.onPause();
-    print("LifecycleNextPage----onPause");
+    logger.d("LifecycleNextPage----onPause");
   }
 
   @override
   void onResume() {
     super.onResume();
-    print("LifecycleNextPage----onResume");
+    logger.d("LifecycleNextPage----onResume");
   }
 
   @override
   void onStop() {
     super.onStop();
-    print("LifecycleNextPage----onStop");
+    logger.d("LifecycleNextPage----onStop");
   }
 
   @override
   void onDestroy() {
-    print("LifecycleNextPage----onDestroy");
+    logger.d("LifecycleNextPage----onDestroy");
     super.onDestroy();
   }
 }

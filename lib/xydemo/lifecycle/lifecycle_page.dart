@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_xy/utils/log_utils.dart';
 import 'package:flutter_xy/widgets/xy_app_bar.dart';
 import 'package:flutter_xy/xydemo/lifecycle/core/page_state.dart';
 
@@ -41,30 +42,30 @@ class _LifecyclePageState extends PageState<LifecyclePage> {
   @override
   void onCreate() {
     super.onCreate();
-    print("LifecyclePage----onCreate");
+    logger.d("LifecyclePage----onCreate");
   }
 
   @override
   void onPause() {
     super.onPause();
-    print("LifecyclePage----onPause");
+    logger.d("LifecyclePage----onPause");
   }
 
   @override
   void onResume() {
     super.onResume();
-    print("LifecyclePage----onResume");
+    logger.d("LifecyclePage----onResume");
   }
 
   @override
   void onStop() {
     super.onStop();
-    print("LifecyclePage----onStop");
+    logger.d("LifecyclePage----onStop");
   }
 
   @override
   void onDestroy() {
-    print("LifecyclePage----onDestroy");
+    logger.d("LifecyclePage----onDestroy");
     super.onDestroy();
   }
 }
