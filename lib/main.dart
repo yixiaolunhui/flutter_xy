@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xy/home.dart';
 import 'package:flutter_xy/route/route_path_const.dart';
-import 'package:flutter_xy/utils/system_bar_utils.dart';
 import 'package:flutter_xy/xydemo/arguments/arguments.dart';
+import 'package:navigation_history_observer/navigation_history_observer.dart';
+
+import 'application.dart';
 
 void main() {
-  StatusBarUtil.setBarStatus(false);
   runApp(const MyApp());
+  App.get().onCreate();
 }
 
 class MyApp extends StatelessWidget {
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      navigatorObservers: [NavigationHistoryObserver()],
       onGenerateRoute: (settings) {
         var uri = Uri.parse(settings.name ?? "");
         var route = uri.path;

@@ -12,6 +12,7 @@ import 'package:flutter_xy/xydemo/wave/wave_page.dart';
 import '../xydemo/darg/drag_bottom_sheet_page.dart';
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
+import '../xydemo/lifecycle/lifecycle_page.dart';
 import '../xydemo/num/num_anim_page.dart';
 import '../xydemo/slider/divisions_slider_page.dart';
 import 'xy_info.dart';
@@ -188,6 +189,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return ArgumentsTestPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "Flutter生命周期",
+      desc: "Flutter生命周期",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const LifecyclePage();
           },
         ));
       },
