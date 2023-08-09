@@ -24,18 +24,49 @@ class _LifecyclePageState extends PageState<LifecyclePage> {
       ),
       body: SafeArea(
         child: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (BuildContext context) {
-                  return const LifecycleNextPage();
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const LifecycleNextPage();
+                    },
+                  ));
                 },
-              ));
-            },
-            child: const Text("跳转"),
+                child: const Text("跳转"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  _showDialog(context);
+                },
+                child: const Text("弹出框"),
+              ),
+            ],
           ),
         ),
       ),
+    );
+  }
+
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Dialog Title'),
+          content: const Text('This is the content of the dialog.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -55,12 +86,6 @@ class _LifecyclePageState extends PageState<LifecyclePage> {
   void onResume() {
     super.onResume();
     logger.d("LifecyclePage----onResume");
-  }
-
-  @override
-  void onStop() {
-    super.onStop();
-    logger.d("LifecyclePage----onStop");
   }
 
   @override

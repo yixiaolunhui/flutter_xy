@@ -51,12 +51,6 @@ class _LifecycleNextPageState extends PageState<LifecycleNextPage> {
   }
 
   @override
-  void onStop() {
-    super.onStop();
-    logger.d("LifecycleNextPage----onStop");
-  }
-
-  @override
   void onDestroy() {
     logger.d("LifecycleNextPage----onDestroy");
     super.onDestroy();

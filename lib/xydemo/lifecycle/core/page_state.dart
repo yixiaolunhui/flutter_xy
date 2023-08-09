@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_history_observer/navigation_history_observer.dart';
+import 'package:flutter_xy/xydemo/lifecycle/core/navigation_history_observer.dart';
 
 abstract class PageState<T extends StatefulWidget> extends State<T>
     with PageStateMixin {
@@ -50,7 +50,6 @@ mixin PageStateMixin<T extends StatefulWidget> on State<T> {
     if (_route != null) {
       RouteHistoryObserver.addResumeCallback(_route!, onResume);
       RouteHistoryObserver.addPauseCallback(_route!, onPause);
-      RouteHistoryObserver.addStopCallback(_route!, onStop);
     }
     super.didChangeDependencies();
   }
@@ -61,7 +60,6 @@ mixin PageStateMixin<T extends StatefulWidget> on State<T> {
     if (_route != null) {
       RouteHistoryObserver.removeResumeCallback(_route!, onResume);
       RouteHistoryObserver.removePauseCallback(_route!, onPause);
-      RouteHistoryObserver.removeStopCallback(_route!, onStop);
     }
     super.dispose();
   }
@@ -72,15 +70,12 @@ mixin PageStateMixin<T extends StatefulWidget> on State<T> {
 
   void onPause() {}
 
-  void onStop() {}
-
   void onDestroy() {}
 }
 
 class RouteHistoryObserver with WidgetsBindingObserver {
   static final Map<Route, Set<VoidCallback>> _resumeCallbacks = {};
   static final Map<Route, Set<VoidCallback>> _pauseCallbacks = {};
-  static final Map<Route, Set<VoidCallback>> _stopCallbacks = {};
   static bool _initialized = false;
   static Route? _currTopRoute;
 
@@ -101,7 +96,6 @@ class RouteHistoryObserver with WidgetsBindingObserver {
       _appResume();
     } else if (state == AppLifecycleState.paused) {
       _appPause();
-      _appStop();
     }
   }
 
@@ -122,13 +116,6 @@ class RouteHistoryObserver with WidgetsBindingObserver {
         for (var callback in pauseCallbackList) {
           callback.call();
         }
-      }
-    }
-
-    var stopCallbackList = _stopCallbacks[_currTopRoute];
-    if (stopCallbackList != null) {
-      for (var callback in stopCallbackList) {
-        callback.call();
       }
     }
 
@@ -174,21 +161,6 @@ class RouteHistoryObserver with WidgetsBindingObserver {
     callbackList.remove(callback);
   }
 
-  static void addStopCallback(Route route, VoidCallback callback) {
-    var callbackList = _stopCallbacks[route];
-    if (callbackList == null) {
-      callbackList = {};
-      _stopCallbacks[route] = callbackList;
-    }
-    callbackList.add(callback);
-  }
-
-  static void removeStopCallback(Route route, VoidCallback callback) {
-    var callbackList = _stopCallbacks[route];
-    if (callbackList == null) return;
-    callbackList.remove(callback);
-  }
-
   static void _appResume() {
     if (_currTopRoute == null) return;
     var callbackList = _resumeCallbacks[_currTopRoute];
@@ -203,15 +175,6 @@ class RouteHistoryObserver with WidgetsBindingObserver {
     var pauseCallbackList = _pauseCallbacks[_currTopRoute];
     if (pauseCallbackList == null) return;
     for (var callback in pauseCallbackList) {
-      callback.call();
-    }
-  }
-
-  static void _appStop() {
-    if (_currTopRoute == null) return;
-    var stopCallbackList = _stopCallbacks[_currTopRoute];
-    if (stopCallbackList == null) return;
-    for (var callback in stopCallbackList) {
       callback.call();
     }
   }

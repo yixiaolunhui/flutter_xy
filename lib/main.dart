@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xy/home.dart';
 import 'package:flutter_xy/route/route_path_const.dart';
 import 'package:flutter_xy/xydemo/arguments/arguments.dart';
-import 'package:navigation_history_observer/navigation_history_observer.dart';
+import 'package:flutter_xy/xydemo/lifecycle/core/navigation_history_observer.dart';
 
 import 'application.dart';
 

@@ -16,7 +16,7 @@ packages:
     source: hosted
     version: "2.1.0"
   built_collection:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: built_collection
       url: "https://pub.flutter-io.cn"
@@ -116,13 +116,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.7.0"
-  navigation_history_observer:
-    dependency: "direct main"
-    description:
-      name: navigation_history_observer
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.1.0"
   nested:
     dependency: transitive
     description:
