@@ -12,6 +12,7 @@ import 'package:flutter_xy/xydemo/wave/wave_page.dart';
 import '../xydemo/darg/drag_bottom_sheet_page.dart';
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
+import '../xydemo/image/image_switch_page.dart';
 import '../xydemo/lifecycle/lifecycle_page.dart';
 import '../xydemo/num/num_anim_page.dart';
 import '../xydemo/slider/divisions_slider_page.dart';
@@ -126,6 +127,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const NumAnimPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "3D画廊",
+      desc: "3D画廊",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const ImageSwitchPage();
           },
         ));
       },
