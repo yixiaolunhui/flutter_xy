@@ -18,7 +18,7 @@
 | 仿腾讯视频Banner     | <img src="https://files.mdnice.com/user/34651/d5940d28-a6e9-4dda-bd92-ec82106bdf16.gif" width="300" alt="仿腾讯视频Banner"/>|
 | 声音波形     | <img src="https://files.mdnice.com/user/34651/edde9843-0699-4db1-bcdd-96bebbca030b.gif" width="300" alt="声音波形"/>|
 | 数字切换动画     | <img src="https://files.mdnice.com/user/34651/991dc36a-212a-438c-9c6d-037d4d3d6303.gif" width="300" alt="数字切换动画"/>|
-| 3D画廊     | <img src="https://upload-images.jianshu.io/upload_images/1307906-ea85c709daf1cfdc.gif" width="300" alt="3D画廊"/>|
+| 3D画廊     | <img src="https://files.mdnice.com/user/34651/e0aa1889-6e4d-4d43-bba4-68ccabf9718b.jpg" width="300" alt="3D画廊"/>|
 
 | 功能名称       | 功能 |    
 | :--------- | :--: |
