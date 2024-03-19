@@ -19,6 +19,7 @@
 | 声音波形     | <img src="https://files.mdnice.com/user/34651/edde9843-0699-4db1-bcdd-96bebbca030b.gif" width="300" alt="声音波形"/>|
 | 数字切换动画     | <img src="https://files.mdnice.com/user/34651/991dc36a-212a-438c-9c6d-037d4d3d6303.gif" width="300" alt="数字切换动画"/>|
 | 3D画廊     | <img src="https://files.mdnice.com/user/34651/e0aa1889-6e4d-4d43-bba4-68ccabf9718b.jpg" width="300" alt="3D画廊"/>|
+| 淘宝京东录音识别图标效果     | <img src="https://files.mdnice.com/user/34651/5996f5af-2f3a-494f-abb4-dad3754bab65.png" width="300" alt="淘宝京东录音识别图标效果"/>|
 | 携程类型切换     | <img src="https://files.mdnice.com/user/34651/56d8e9c1-3a73-4924-996f-6e223d4eb4a9.gif" width="300" alt="携程类型切换"/>|
 | 二维码扫描线     | <img src="https://files.mdnice.com/user/34651/61882c17-ba36-4451-ad42-2be559fe67e4.gif" width="300" alt="二维码扫描线"/>|
 
@@ -31,9 +32,6 @@
 | 脚本名称       | 功能 |    
 | :--------- | :--: |
 | 资源文件R文件生成  | R.xxxx|
-
-1111
-22222
 
  ### "Android小样"公众号
 
