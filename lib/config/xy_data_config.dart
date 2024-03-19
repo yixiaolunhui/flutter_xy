@@ -6,6 +6,8 @@ import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
+import 'package:flutter_xy/xydemo/scan/scan_line_page.dart';
+import 'package:flutter_xy/xydemo/tabbar/xc_tabbar_widget.dart';
 import 'package:flutter_xy/xydemo/tx/tx_banner_page.dart';
 import 'package:flutter_xy/xydemo/wave/wave_page.dart';
 
@@ -15,6 +17,7 @@ import '../xydemo/float/operate/float_operate_page.dart';
 import '../xydemo/image/image_switch_page.dart';
 import '../xydemo/lifecycle/lifecycle_page.dart';
 import '../xydemo/num/num_anim_page.dart';
+import '../xydemo/search/record_page.dart';
 import '../xydemo/slider/divisions_slider_page.dart';
 import 'xy_info.dart';
 
@@ -138,6 +141,39 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const ImageSwitchPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "搜索音频识别布局",
+      desc: "搜索音频识别布局",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const RecordPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "二维码扫描线",
+      desc: "二维码扫描线",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const ScanLinePage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "携程首页类型切换",
+      desc: "携程首页类型切换",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const XieChengHomePage();
           },
         ));
       },
