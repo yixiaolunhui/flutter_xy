@@ -22,7 +22,7 @@
 | 淘宝京东录音识别图标效果    | <img src="https://files.mdnice.com/user/34651/5996f5af-2f3a-494f-abb4-dad3754bab65.png" width="300" alt="淘宝京东录音识别图标效果"/> |
 | 携程类型切换          |    <img src="https://files.mdnice.com/user/34651/56d8e9c1-3a73-4924-996f-6e223d4eb4a9.gif" width="300" alt="携程类型切换"/>    |
 | 二维码扫描线          |    <img src="https://files.mdnice.com/user/34651/61882c17-ba36-4451-ad42-2be559fe67e4.gif" width="300" alt="二维码扫描线"/>    |
-| 画板              |   <img src="![](https://files.mdnice.com/user/34651/eabf205e-6beb-44d1-9e90-459964efc1c8.gif)" width="300" alt="画板"/>    |
+| 画板              |      <img src="https://files.mdnice.com/user/34651/eabf205e-6beb-44d1-9e90-459964efc1c8.gif" width="300" alt="画板"/>      |
 
 | 功能名称       | 功能 |    
 | :--------- | :--: |
