@@ -3,6 +3,7 @@ import 'package:flutter_xy/xydemo/arguments/arguments_test_page.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
+import 'package:flutter_xy/xydemo/drawingboard/drawing_page.dart';
 import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
@@ -174,6 +175,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const XieChengHomePage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "画板",
+      desc: "画板",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const DrawingPage();
           },
         ));
       },
