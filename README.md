@@ -23,10 +23,12 @@
 | 携程类型切换          |    <img src="https://files.mdnice.com/user/34651/56d8e9c1-3a73-4924-996f-6e223d4eb4a9.gif" width="300" alt="携程类型切换"/>    |
 | 二维码扫描线          |    <img src="https://files.mdnice.com/user/34651/61882c17-ba36-4451-ad42-2be559fe67e4.gif" width="300" alt="二维码扫描线"/>    |
 | 画板              |      <img src="https://files.mdnice.com/user/34651/eabf205e-6beb-44d1-9e90-459964efc1c8.gif" width="300" alt="画板"/>      |
+| 弹框链              |   <img src="![](https://files.mdnice.com/user/34651/9280aa5f-d191-44d2-9246-1ba3a21c1645.gif)" width="300" alt="弹框链"/>   |
 
-| 功能名称       | 功能 |    
-| :--------- | :--: |
-| 界面跳转参数处理  | 路由传参+arguments |   
+
+| 功能名称       |                  功能                   |    
+| :--------- |:-------------------------------------:|
+| 界面跳转参数处理  |            路由传参+arguments             |   
 | Flutter生命周期 | 新增onCreate、onResume、onPause、onDestroy |
 
 

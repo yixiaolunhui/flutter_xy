@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xy/config/xy_data_config.dart';
 import 'package:flutter_xy/config/xy_info.dart';
 
+import 'application.dart';
+
 ///DEMO案例-首页
 class HomePage extends StatefulWidget {
   HomePage({
@@ -16,6 +18,7 @@ class HomePage extends StatefulWidget {
 class HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    App.get().context = context;
     return Scaffold(
       backgroundColor: const Color(0xffF5F6F9),
       appBar: AppBar(

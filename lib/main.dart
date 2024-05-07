@@ -22,7 +22,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      navigatorObservers: [NavigationHistoryObserver()],
+      navigatorObservers: [
+        NavigationHistoryObserver(),
+      ],
       onGenerateRoute: (settings) {
         var uri = Uri.parse(settings.name ?? "");
         var route = uri.path;

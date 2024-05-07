@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xy/xydemo/arguments/arguments_test_page.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
+import 'package:flutter_xy/xydemo/chain/chain_dialog_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/drawingboard/drawing_page.dart';
@@ -260,6 +261,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const LifecyclePage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "Flutter弹框链",
+      desc: "Flutter弹框链",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const ChainDialogPage();
           },
         ));
       },
