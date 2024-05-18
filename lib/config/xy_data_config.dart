@@ -7,6 +7,7 @@ import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/drawingboard/drawing_page.dart';
 import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/loading/loading_page.dart';
+import 'package:flutter_xy/xydemo/rating/rating_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 import 'package:flutter_xy/xydemo/scan/scan_line_page.dart';
@@ -199,6 +200,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const LoadingPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "三角形评分控件",
+      desc: "三角形评分控件",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const RatingPage();
           },
         ));
       },

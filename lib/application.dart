@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_xy/utils/system_bar_utils.dart';
 import 'package:flutter_xy/xydemo/lifecycle/core/page_state.dart';
 

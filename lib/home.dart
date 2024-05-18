@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_xy/config/xy_data_config.dart';
 import 'package:flutter_xy/config/xy_info.dart';
 
@@ -18,6 +19,7 @@ class HomePage extends StatefulWidget {
 class HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(375, 812));
     App.get().context = context;
     return Scaffold(
       backgroundColor: const Color(0xffF5F6F9),
