@@ -41,7 +41,7 @@ class _FlowWidgetState extends State<FlowWidget> {
           final textWidth = _getTextWidth(textWidget, context);
           if (widthSoFar + textWidth > constraints.maxWidth) {
             lines++;
-            widthSoFar = textWidth + 20;
+            widthSoFar = textWidth +30;
             if (lines >= widget.maxLines &&
                 !isExpanded &&
                 widget.expandBtn != null) {
@@ -56,7 +56,7 @@ class _FlowWidgetState extends State<FlowWidget> {
               break;
             }
           } else {
-            widthSoFar += textWidth + 20;
+            widthSoFar += textWidth + 30;
           }
 
           toDisplay.add(Container(

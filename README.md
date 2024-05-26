@@ -26,6 +26,7 @@
 | 弹框链             |     <img src="https://files.mdnice.com/user/34651/9280aa5f-d191-44d2-9246-1ba3a21c1645.gif" width="300" alt="弹框链"/>      |
 | 加载中动画           |    <img src="https://files.mdnice.com/user/34651/c4d98388-af0d-42b2-8324-8c11b4517463.gif" width="300" alt="加载中动画"/>     |
 | 三角形指标评分         |    <img src="https://files.mdnice.com/user/34651/e3ce8686-5a49-409c-bc27-ac5aa213ef0a.gif" width="300" alt="三角形指标评分"/>     |
+| 折叠标签         |    <img src="https://files.mdnice.com/user/34651/16710a0d-471a-48bd-9e2b-8816e4578a7b.gif" width="300" alt="折叠标签"/>     |
 
 
 | 功能名称       |                  功能                   |    

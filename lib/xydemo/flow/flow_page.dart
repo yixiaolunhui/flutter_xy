@@ -38,6 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
           maxLines: 2,
           expandBtn: Container(
             height: 40,
+            width: 60,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(4),
+            ),
             child: const Text(
               "展开",
               style: TextStyle(fontSize: 16),
@@ -45,6 +51,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           retractBtn: Container(
             height: 40,
+            width: 60,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(4),
+            ),
             child: const Text(
               "收起",
               style: TextStyle(fontSize: 16),

@@ -18,6 +18,7 @@ import 'package:flutter_xy/xydemo/wave/wave_page.dart';
 import '../xydemo/darg/drag_bottom_sheet_page.dart';
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
+import '../xydemo/flow/tag_flow_page.dart';
 import '../xydemo/image/image_switch_page.dart';
 import '../xydemo/lifecycle/lifecycle_page.dart';
 import '../xydemo/num/num_anim_page.dart';
@@ -211,6 +212,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const RatingPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "折叠标签",
+      desc: "折叠标签",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const TagFlowPage();
           },
         ));
       },
