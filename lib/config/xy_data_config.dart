@@ -12,6 +12,7 @@ import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
 import 'package:flutter_xy/xydemo/scan/scan_line_page.dart';
 import 'package:flutter_xy/xydemo/tabbar/xc_tabbar_widget.dart';
+import 'package:flutter_xy/xydemo/text/expandable_text_page.dart';
 import 'package:flutter_xy/xydemo/tx/tx_banner_page.dart';
 import 'package:flutter_xy/xydemo/wave/wave_page.dart';
 
@@ -223,6 +224,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const TagFlowPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "折叠Text",
+      desc: "折叠Text",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const ExpandableTextPage();
           },
         ));
       },
