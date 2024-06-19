@@ -28,6 +28,7 @@
 | 三角形指标评分         |   <img src="https://files.mdnice.com/user/34651/e3ce8686-5a49-409c-bc27-ac5aa213ef0a.gif" width="300" alt="三角形指标评分"/>    |
 | 折叠标签         |     <img src="https://files.mdnice.com/user/34651/16710a0d-471a-48bd-9e2b-8816e4578a7b.gif" width="300" alt="折叠标签"/>     |
 | 折叠文本         |     <img src="https://files.mdnice.com/user/34651/8f821ac5-468e-427d-a98f-65944ff797c6.gif" width="300" alt="折叠文本"/>     |
+| 标签循环滚动控件         |     <img src="https://files.mdnice.com/user/34651/8ca7a4ca-4c98-437f-af69-f62dde7fa97f.gif" width="300" alt="标签循环滚动控件"/>     |
 
 
 | 功能名称       |                  功能                   |    
