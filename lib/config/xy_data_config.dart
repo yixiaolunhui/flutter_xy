@@ -6,6 +6,7 @@ import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
 import 'package:flutter_xy/xydemo/drawingboard/drawing_page.dart';
 import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
+import 'package:flutter_xy/xydemo/image/avatar/avatar_grid_page.dart';
 import 'package:flutter_xy/xydemo/list/head_icon/circular_image_list_page.dart';
 import 'package:flutter_xy/xydemo/loading/loading_page.dart';
 import 'package:flutter_xy/xydemo/rating/rating_page.dart';
@@ -259,6 +260,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const CircularImageListPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "微信群头像",
+      desc: "微信群头像",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return AvatarGridPage();
           },
         ));
       },
