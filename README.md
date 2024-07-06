@@ -31,6 +31,7 @@
 | 标签循环滚动控件         |     <img src="https://files.mdnice.com/user/34651/8ca7a4ca-4c98-437f-af69-f62dde7fa97f.gif" width="300" alt="标签循环滚动控件"/>     |
 | 头像叠加动画         |     <img src="https://upload-images.jianshu.io/upload_images/1307906-161f428b690ffd72.gif" width="300" alt="头像叠加动画"/>     |
 | 微信群头像         |     <img src="https://files.mdnice.com/user/34651/6818115a-4173-410c-bee9-60ec3a322bdb.png" width="300" alt="微信群头像"/>     |
+| 双向PK进度条         |     <img src="https://files.mdnice.com/user/34651/d141fde0-a1e0-4c63-869f-e7fdde7e58b1.png" width="300" alt="双向PK进度条"/>     |
 
 
 | 功能名称       |                  功能                   |    

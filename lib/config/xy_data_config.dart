@@ -9,6 +9,7 @@ import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/image/avatar/avatar_grid_page.dart';
 import 'package:flutter_xy/xydemo/list/head_icon/circular_image_list_page.dart';
 import 'package:flutter_xy/xydemo/loading/loading_page.dart';
+import 'package:flutter_xy/xydemo/progressbar/progressbar_page.dart';
 import 'package:flutter_xy/xydemo/rating/rating_page.dart';
 import 'package:flutter_xy/xydemo/ruler/ruler_page.dart';
 import 'package:flutter_xy/xydemo/ruler/semi_circle_ruler_page.dart';
@@ -271,6 +272,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return AvatarGridPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "双向PK进度条",
+      desc: "双向PK进度条",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const ProgressbarPage();
           },
         ));
       },
