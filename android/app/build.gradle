@@ -39,7 +39,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion flutter.minSdkVersion
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'

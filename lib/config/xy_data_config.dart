@@ -23,6 +23,7 @@ import '../xydemo/darg/drag_bottom_sheet_page.dart';
 import '../xydemo/float/float_page.dart';
 import '../xydemo/float/operate/float_operate_page.dart';
 import '../xydemo/flow/tag_flow_page.dart';
+import '../xydemo/grop/grop_list_page.dart';
 import '../xydemo/image/image_switch_page.dart';
 import '../xydemo/lifecycle/lifecycle_page.dart';
 import '../xydemo/loop/loop_page.dart';
@@ -283,6 +284,18 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const ProgressbarPage();
+          },
+        ));
+      },
+    ));
+
+    children.add(UIGroupInfo(
+      groupName: "分组列表",
+      desc: "分组列表",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const GroupListPage();
           },
         ));
       },

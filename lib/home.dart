@@ -45,7 +45,7 @@ class HomeState extends State<HomePage> {
                 animationDuration: const Duration(milliseconds: 500),
                 expansionCallback: (index, isExpanded) {
                   setState(() {
-                    widget.groupList[index].isExpand = !isExpanded;
+                    widget.groupList[index].isExpand = isExpanded;
                   });
                 },
                 children: widget.groupList.map((group) {
