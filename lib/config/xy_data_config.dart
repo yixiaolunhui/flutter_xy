@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xy/xydemo/arguments/arguments_test_page.dart';
+import 'package:flutter_xy/xydemo/ball/ball_list_page.dart';
 import 'package:flutter_xy/xydemo/carousel/carousel_page.dart';
 import 'package:flutter_xy/xydemo/chain/chain_dialog_page.dart';
 import 'package:flutter_xy/xydemo/clock/clock_page.dart';
 import 'package:flutter_xy/xydemo/code/code_page.dart';
+import 'package:flutter_xy/xydemo/common/common_widget_page.dart';
 import 'package:flutter_xy/xydemo/drawingboard/drawing_page.dart';
 import 'package:flutter_xy/xydemo/emoji/emoji_anim_page.dart';
 import 'package:flutter_xy/xydemo/image/avatar/avatar_grid_page.dart';
@@ -296,6 +298,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const GroupListPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "物理小球碰撞效果",
+      desc: "物理小球碰撞效果",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const BallListPage();
           },
         ));
       },

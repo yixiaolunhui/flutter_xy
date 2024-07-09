@@ -33,6 +33,7 @@
 | 微信群头像         |    <img src="https://files.mdnice.com/user/34651/6818115a-4173-410c-bee9-60ec3a322bdb.png" width="300" alt="微信群头像"/>     |
 | 双向PK进度条         |   <img src="https://files.mdnice.com/user/34651/d141fde0-a1e0-4c63-869f-e7fdde7e58b1.png" width="300" alt="双向PK进度条"/>    |
 | 悬浮分组列表         |    <img src="https://files.mdnice.com/user/34651/d9629956-0fb1-4ab9-bdf9-eb0f4c3da6bd.gif" width="300" alt="悬浮分组列表"/>    |
+| 物理小球碰撞效果         |    <img src="https://i-blog.csdnimg.cn/direct/1f6d800e939f443184fe62808eff7071.gif" width="300" alt="物理小球碰撞效果"/>    |
 
 
 | 功能名称       |                  功能                   |    
