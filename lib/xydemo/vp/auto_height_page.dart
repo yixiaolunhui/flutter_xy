@@ -1,85 +1,77 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_xy/r.dart';
+import 'package:flutter_xy/xydemo/vp/pageview/auto_height_page_view.dart';
 
-class CustomDynamicHeightPageView extends StatefulWidget {
-  final List<Widget> pages;
+import '../../widgets/xy_app_bar.dart';
 
-  const CustomDynamicHeightPageView({Key? key, required this.pages})
-      : super(key: key);
+class AutoHeightPageViewPage extends StatefulWidget {
+  const AutoHeightPageViewPage({Key? key}) : super(key: key);
 
   @override
-  CustomDynamicHeightPageViewState createState() =>
-      CustomDynamicHeightPageViewState();
+  State<StatefulWidget> createState() => AutoHeightPageViewState();
 }
 
-class CustomDynamicHeightPageViewState
-    extends State<CustomDynamicHeightPageView> {
+class AutoHeightPageViewState extends State<AutoHeightPageViewPage> {
   final PageController _pageController = PageController();
-  final List<double> _heights = [250, 400, 250];
-  double _currentHeight = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _currentHeight = _heights[0];
-    _pageController.addListener(_updateHeight);
-  }
-
-  void _updateHeight() {
-    if (_pageController.position.haveDimensions && _heights.isNotEmpty) {
-      double page = _pageController.page ?? 0.0;
-      int index = page.floor();
-      int nextIndex = (index + 1) < _heights.length ? index + 1 : index;
-      double percent = page - index;
-      double height =
-          _heights[index] + (_heights[nextIndex] - _heights[index]) * percent;
-      setState(() {
-        _currentHeight = height;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 200),
-      height: _currentHeight,
-      curve: Curves.easeOut,
-      child: PageView(
-        controller: _pageController,
-        children: widget.pages,
+    return Scaffold(
+      appBar: XYAppBar(
+          title: '自适用高度PageView',
+          onBack: () {
+            Navigator.pop(context);
+          }),
+      body: Container(
+        color: Colors.white,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              AutoHeightPageView(
+                pageController: _pageController,
+                children: [
+                  Container(
+                    color: Colors.white,
+                    child: ListView(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        Container(
+                          color: Colors.red,
+                          height: 50,
+                          alignment: Alignment.center,
+                          child: const Text("第一个界面"),
+                        ),
+                        Container(
+                          color: Colors.yellow,
+                          height: 50,
+                          alignment: Alignment.center,
+                          child: const Text("第一个界面"),
+                        ),
+                        Container(
+                          color: Colors.blue,
+                          height: 50,
+                          alignment: Alignment.center,
+                          child: const Text("第一个界面"),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                      color: Colors.green,
+                      height: 250,
+                      child: const Center(child: Text('第二个界面'))),
+                ],
+              ),
+              Image.asset(
+                R.vp_content_jpg,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.fill,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: CustomDynamicHeightPageView(
-        pages: [
-          Container(
-              key: GlobalKey(),
-              color: Colors.red,
-              height: 200,
-              child: const Center(child: Text('Page 2'))),
-          Container(
-              key: GlobalKey(),
-              color: Colors.green,
-              height: 300,
-              child: const Center(child: Text('Page 2'))),
-          Container(
-              key: GlobalKey(),
-              color: Colors.blue,
-              height: 250,
-              child: const Center(child: Text('Page 3'))),
-        ],
-      ),
-    ),
-  ));
 }

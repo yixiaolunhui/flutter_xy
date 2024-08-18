@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HeightMeasuringWidget extends StatefulWidget {
+class HeightMeasureWidget extends StatefulWidget {
   final Widget child;
   final Function(double height) onHeightChanged;
 
-  const HeightMeasuringWidget(
+  const HeightMeasureWidget(
       {super.key, required this.child, required this.onHeightChanged});
 
   @override
-  HeightMeasuringWidgetState createState() => HeightMeasuringWidgetState();
+  HeightMeasureState createState() => HeightMeasureState();
 }
 
-class HeightMeasuringWidgetState extends State<HeightMeasuringWidget> {
+class HeightMeasureState extends State<HeightMeasureWidget> {
   final GlobalKey _key = GlobalKey();
 
   @override

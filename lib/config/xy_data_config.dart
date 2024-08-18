@@ -32,6 +32,7 @@ import '../xydemo/loop/loop_page.dart';
 import '../xydemo/num/num_anim_page.dart';
 import '../xydemo/search/record_page.dart';
 import '../xydemo/slider/divisions_slider_page.dart';
+import '../xydemo/vp/auto_height_page.dart';
 import 'xy_info.dart';
 
 class UIGroupDataConfig {
@@ -309,6 +310,17 @@ class UIGroupDataConfig {
         Navigator.push(context, MaterialPageRoute(
           builder: (BuildContext context) {
             return const BallListPage();
+          },
+        ));
+      },
+    ));
+    children.add(UIGroupInfo(
+      groupName: "自适用高度PageView",
+      desc: "自适用高度PageView",
+      onClick: (BuildContext context) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const AutoHeightPageViewPage();
           },
         ));
       },

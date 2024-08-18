@@ -16,4 +16,5 @@ class R {
   static const String img4_jpg = 'assets/images/img4.jpg';
   static const String muma_png = 'assets/images/muma.png';
   static const String record_png = 'assets/images/record.png';
+  static const String vp_content_jpg = 'assets/images/vp_content.jpg';
 }
