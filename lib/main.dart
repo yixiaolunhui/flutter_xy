@@ -6,6 +6,7 @@ import 'package:flutter_xy/xydemo/lifecycle/core/navigation_history_observer.dar
 
 import 'application.dart';
 
+//1
 void main() {
   runApp(const MyApp());
   App.get().onCreate();
